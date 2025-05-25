@@ -1,0 +1,50 @@
+.card-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1001;
+}
+
+.card-modal-content {
+  background: white;
+  border-radius: 15px;
+  max-width: 800px;
+  width: 90%;
+  max-height: 90vh;
+  overflow-y: auto;
+  display: flex;
+  animation: modalOpen 0.3s ease;
+}
+
+@keyframes modalOpen {
+  from { transform: scale(0.9); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+.card-modal-image {
+  width: 50%;
+  object-fit: cover;
+  border-radius: 15px 0 0 15px;
+}
+
+.card-modal-text {
+  padding: 25px;
+  width: 50%;
+}
+
+.card-close-btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #666;
+}
